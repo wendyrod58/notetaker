@@ -15,14 +15,14 @@ app.use(express.urlencoded({extended: true}));
 app.use(express.static('public')); 
 
 //setup the diff routes 
-//API ROUTESS 
+//API ROUTES 
 
 app.use("/api", require("./routes/apiRoutes")); 
 
 //1. Render my Notes.html file in the browser 
-app.use("/notes", (req,res) =>{
+app.use("/notes", (req,res) => {
     res.sendFile(path.join(__dirname, "./public/notes.html"))
-})
+});
 
 
 // listen to the server 
